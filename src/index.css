@@ -1,0 +1,253 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Theme variables for light mode */
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+  }
+
+  /* Theme variables for dark mode */
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+    /* Dark text & UI colors with better contrast */
+    --dark-text-primary: 0 0% 95%;
+    --dark-text-secondary: 0 0% 85%;
+    --dark-text-muted: 0 0% 75%;
+    --dark-bg-hover: 220 10% 17%;
+  }
+
+  /* Theme: Forest Green */
+  .theme-forest {
+    --background: 120 10% 100%;
+    --foreground: 160 10% 3.9%;
+    --card: 120 10% 100%;
+    --card-foreground: 160 10% 3.9%;
+    --popover: 120 10% 100%;
+    --popover-foreground: 160 10% 3.9%;
+    --primary: 142 75% 40%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 142 20% 93%;
+    --secondary-foreground: 142 70% 20%;
+    --muted: 142 10% 95%;
+    --muted-foreground: 142 10% 40%;
+    --accent: 142 40% 90%;
+    --accent-foreground: 142 70% 20%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 142 20% 85%;
+    --input: 142 20% 85%;
+    --ring: 142 75% 40%;
+  }
+
+  .dark.theme-forest {
+    --background: 142 20% 10%;
+    --foreground: 0 0% 98%;
+    --card: 142 20% 10%;
+    --card-foreground: 0 0% 98%;
+    --popover: 142 20% 10%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 142 70% 50%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 142 30% 15%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 142 30% 15%;
+    --muted-foreground: 142 10% 70%;
+    --accent: 142 30% 20%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 142 30% 20%;
+    --input: 142 30% 20%;
+    --ring: 142 70% 50%;
+  }
+
+  /* Theme: Ocean Blue */
+  .theme-ocean {
+    --background: 200 20% 100%;
+    --foreground: 200 80% 10%;
+    --card: 200 20% 100%;
+    --card-foreground: 200 80% 10%;
+    --popover: 200 20% 100%;
+    --popover-foreground: 200 80% 10%;
+    --primary: 200 90% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 200 30% 93%;
+    --secondary-foreground: 200 80% 30%;
+    --muted: 200 20% 95%;
+    --muted-foreground: 200 20% 40%;
+    --accent: 200 50% 90%;
+    --accent-foreground: 200 80% 30%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 200 30% 85%;
+    --input: 200 30% 85%;
+    --ring: 200 90% 50%;
+  }
+
+  .dark.theme-ocean {
+    --background: 200 50% 8%;
+    --foreground: 0 0% 98%;
+    --card: 200 50% 8%;
+    --card-foreground: 0 0% 98%;
+    --popover: 200 50% 8%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 200 90% 50%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 200 30% 15%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 200 30% 15%;
+    --muted-foreground: 200 10% 70%;
+    --accent: 200 30% 20%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 200 30% 20%;
+    --input: 200 30% 20%;
+    --ring: 200 90% 50%;
+  }
+
+  /* Theme: Sunset Orange */
+  .theme-sunset {
+    --background: 30 20% 100%;
+    --foreground: 20 80% 10%;
+    --card: 30 20% 100%;
+    --card-foreground: 20 80% 10%;
+    --popover: 30 20% 100%;
+    --popover-foreground: 20 80% 10%;
+    --primary: 20 90% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 30 30% 93%;
+    --secondary-foreground: 20 80% 30%;
+    --muted: 30 20% 95%;
+    --muted-foreground: 20 20% 40%;
+    --accent: 30 50% 90%;
+    --accent-foreground: 20 80% 30%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 30 30% 85%;
+    --input: 30 30% 85%;
+    --ring: 20 90% 50%;
+  }
+
+  .dark.theme-sunset {
+    --background: 20 50% 8%;
+    --foreground: 0 0% 98%;
+    --card: 20 50% 8%;
+    --card-foreground: 0 0% 98%;
+    --popover: 20 50% 8%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 20 90% 50%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 20 30% 15%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 20 30% 15%;
+    --muted-foreground: 20 10% 70%;
+    --accent: 20 30% 20%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 20 30% 20%;
+    --input: 20 30% 20%;
+    --ring: 20 90% 50%;
+  }
+
+  /* Keyframe definitions for animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideInRight {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+  }
+
+  @keyframes fadeInUp {
+    from { 
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to { 
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@layer components {
+  /* Improved dark mode text styles */
+  .dark .text-dark-primary {
+    color: hsl(var(--dark-text-primary));
+  }
+  
+  .dark .text-dark-secondary {
+    color: hsl(var(--dark-text-secondary));
+  }
+  
+  .dark .text-dark-muted {
+    color: hsl(var(--dark-text-muted));
+  }
+  
+  .dark .hover\:bg-dark-hover:hover {
+    background-color: hsl(var(--dark-bg-hover));
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out forwards;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.3s ease-out forwards;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.3s ease-out forwards;
+  }
+
+  /* Chart appearance animation */
+  .chart-appear {
+    animation: fadeIn 0.5s ease-out;
+  }
+}
